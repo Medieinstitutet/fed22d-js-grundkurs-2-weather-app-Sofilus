@@ -2,42 +2,70 @@
 <html lang="sv">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/ico" href="/js-template/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projekt</title>
-    <script type="module" crossorigin src="/js-template/assets/index.684fe94c.js"></script>
-    <link rel="stylesheet" href="/js-template/assets/index.3ed5503c.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Website about weather">
+    <meta name="robots" content="all">
+    <meta property="og:title" content="Last hour weather in Sweden">
+    <meta property="og:type" content="Portfolio">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="/public/weather.jpg">
+    <link rel="icon" type="image/ico" href="/fed22d-js-grundkurs-2-weather-app-Sofilus/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300&family=Rubik&display=swap" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/364f1f7cab.js" crossorigin="anonymous" defer></script>
+    <title>Vädret idag</title>
+    <script type="module" crossorigin src="/fed22d-js-grundkurs-2-weather-app-Sofilus/assets/index.441c7ad4.js"></script>
+    <link rel="stylesheet" href="/fed22d-js-grundkurs-2-weather-app-Sofilus/assets/index.76f7440f.css">
   </head>
   <body>
-    <div >
       <header>
-        <section class="headerContainer">
+        <section class="header-container">
           <h1> Vädret idag </h1>
+          <p id="positionDoesNotExist"></p>
         </section>
       </header>
-      <main class="backgroundImg">
-        <form action="">
-          <input type="text" placeholder="Sök ort" name="search">
-          <button type="submit"></button>
-        </form>
-        <article class="tempratureContainer">
-          <section>
-            <h2 class="pickedLocation">Skepplanda</h2>
-            <h3 class="tempratureOverTime"> Tempratur senaste timmen</h3>
-            <div class="tempratureNowContainer">
-              <p class="temprature">10</p>
-              <p class="tempratureIcon">°</p>
+      <main class="background-img" id="backgroundImg">
+        <label for="searchField">
+          <input type="search" placeholder="Sök och välj ort" name="search" id="searchField" autocomplete="off" tabindex="0">
+        </label>
+        <div class="magnifying-glass" >
+          <i class="fa-solid fa-magnifying-glass" aria-lable="magnifying-glass"></i>
+        </div>
+        <div class="search-dropdown display-none" id="searchDropdown" >
+          <ul>
+            <li id="myPosition" tabindex="0">Min position</li>
+          </ul>
+        </div>
+        <div class="stations-container display-none" id="dropdownStations">
+          <ul id="suggestedStations"></ul>
+        </div>
+          <h2 class="picked-location" id="locality"></h2>
+        <div class="flex-parameters">
+          <section class="temperature-now-container" id="temperatureNowContainer">
+            <h3 class="temperature-over-time"> Temperatur senaste timmen</h3>
+            <div class="degrees">
+              <p class="temperature" id="temperatureNow"></p>
+              <p class="temperature-icon">°</p>
             </div>
           </section>
-        <article>
+          <section class="other-information">
+            <div class="wind-speed-container">
+              <i class="fa-solid fa-wind other-icon" aria-label="wind-symbol"></i>
+              <h3>Vindhastighet</h3>
+              <p id="windSpeed" class="other"></p>
+              <p class="other">m/s</p>
+            </div>
+            <div class="rain-container">
+              <i class="fa-solid fa-droplet other-icon" aria-label="raindrop-symbol"></i>
+              <h3>Nederbörd</h3>
+              <p id="rainAmount" class="other"></p>
+              <p class="other">mm</p>
+            </div>
+        </section>
+        </div>
       </main>
-    </div>
-    <footer></footer>
+      <footer></footer>
     
   </body>
 </html>
-<!-- TODO
-    - Validera HTML (kopiera den renderade HTML-koden): https://validator.w3.org/#validate_by_input
-    - Kontrollera tillgänglighet: https://www.a11yproject.com/checklist/ & Chrome Lighthouse/Firefox Accessibility Tools
-    - Validera genererade CSS: https://jigsaw.w3.org/css-validator/#validate_by_input
-    -->
