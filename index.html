@@ -2,70 +2,69 @@
 <html lang="sv">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Website about weather">
-    <meta name="robots" content="all">
-    <meta property="og:title" content="Last hour weather in Sweden">
-    <meta property="og:type" content="Portfolio">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="/public/weather.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Website about weather" />
+    <meta name="robots" content="all" />
+    <meta property="og:title" content="Last hour weather in Sweden" />
+    <meta property="og:type" content="Portfolio" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="/public/weather.jpg" />
     <link rel="icon" type="image/ico" href="/fed22d-js-grundkurs-2-weather-app-Sofilus/favicon.ico" />
-    <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300&family=Rubik&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300&family=Rubik&display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/364f1f7cab.js" crossorigin="anonymous" defer></script>
     <title>Vädret idag</title>
-    <script type="module" crossorigin src="/fed22d-js-grundkurs-2-weather-app-Sofilus/assets/index.15530850.js"></script>
+    <script type="module" crossorigin src="/fed22d-js-grundkurs-2-weather-app-Sofilus/assets/index.e386977f.js"></script>
     <link rel="stylesheet" href="/fed22d-js-grundkurs-2-weather-app-Sofilus/assets/index.76f7440f.css">
   </head>
   <body>
-      <header>
-        <section class="header-container">
-          <h1> Vädret idag </h1>
-          <p id="positionDoesNotExist"></p>
+    <header>
+      <section class="header-container">
+        <h1>Vädret idag</h1>
+        <p id="positionDoesNotExist"></p>
+      </section>
+    </header>
+    <main class="background-img" id="backgroundImg">
+      <label for="searchField">
+        <input type="search" placeholder="Sök och välj ort" name="search" id="searchField" autocomplete="off" tabindex="0"/>
+      </label>
+      <div class="magnifying-glass">
+        <i class="fa-solid fa-magnifying-glass" aria-lable="magnifying-glass"></i>
+      </div>
+      <div class="search-dropdown display-none" id="searchDropdown">
+        <ul>
+          <li id="myPosition" tabindex="0">Min position</li>
+        </ul>
+      </div>
+      <div class="stations-container display-none" id="dropdownStations">
+        <ul id="suggestedStations"></ul>
+      </div>
+      <h2 class="picked-location" id="locality"></h2>
+      <div class="flex-parameters">
+        <section class="temperature-now-container" id="temperatureNowContainer">
+          <h3 class="temperature-over-time">Temperatur senaste timmen</h3>
+          <div class="degrees">
+            <p class="temperature" id="temperatureNow"></p>
+            <p class="temperature-icon">°</p>
+          </div>
         </section>
-      </header>
-      <main class="background-img" id="backgroundImg">
-        <label for="searchField">
-          <input type="search" placeholder="Sök och välj ort" name="search" id="searchField" autocomplete="off" tabindex="0">
-        </label>
-        <div class="magnifying-glass" >
-          <i class="fa-solid fa-magnifying-glass" aria-lable="magnifying-glass"></i>
-        </div>
-        <div class="search-dropdown display-none" id="searchDropdown" >
-          <ul>
-            <li id="myPosition" tabindex="0">Min position</li>
-          </ul>
-        </div>
-        <div class="stations-container display-none" id="dropdownStations">
-          <ul id="suggestedStations"></ul>
-        </div>
-          <h2 class="picked-location" id="locality"></h2>
-        <div class="flex-parameters">
-          <section class="temperature-now-container" id="temperatureNowContainer">
-            <h3 class="temperature-over-time"> Temperatur senaste timmen</h3>
-            <div class="degrees">
-              <p class="temperature" id="temperatureNow"></p>
-              <p class="temperature-icon">°</p>
-            </div>
-          </section>
-          <section class="other-information">
-            <div class="wind-speed-container">
-              <i class="fa-solid fa-wind other-icon" aria-label="wind-symbol"></i>
-              <h3>Vindhastighet</h3>
-              <p id="windSpeed" class="other"></p>
-              <p class="other">m/s</p>
-            </div>
-            <div class="rain-container">
-              <i class="fa-solid fa-droplet other-icon" aria-label="raindrop-symbol"></i>
-              <h3>Nederbörd</h3>
-              <p id="rainAmount" class="other"></p>
-              <p class="other">mm</p>
-            </div>
+        <section class="other-information">
+          <div class="wind-speed-container">
+            <i class="fa-solid fa-wind other-icon" aria-label="wind-symbol"></i>
+            <h3>Vindhastighet</h3>
+            <p id="windSpeed" class="other"></p>
+            <p class="other">m/s</p>
+          </div>
+          <div class="rain-container">
+            <i class="fa-solid fa-droplet other-icon" aria-label="raindrop-symbol"></i>
+            <h3>Nederbörd</h3>
+            <p id="rainAmount" class="other"></p>
+            <p class="other">mm</p>
+          </div>
         </section>
-        </div>
-      </main>
-      <footer></footer>
+      </div>
+    </main>
+    <footer></footer>
     
   </body>
 </html>
