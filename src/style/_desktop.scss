@@ -1,0 +1,119 @@
+/* ------------------------------------------
+-----------------Header---------------------
+------------------------------------------- */
+
+h1 {
+  font-size: 6rem;
+}
+
+/* ------------------------------------------
+  -----------------Searching field-------------
+  ------------------------------------------- */
+
+label {
+  right: 30vw;
+  top: 270px;
+}
+
+.magnifying-glass {
+  top: 270px;
+  right: 30vw;
+}
+
+.search-dropdown {
+  top: 310px;
+  right: 30vw;
+}
+
+.stations-container ul {
+  top: 293px;
+  right: 30vw;
+}
+
+/* ------------------------------------------
+  -----------------Main---------------------
+  ------------------------------------------- */
+.picked-location {
+  margin-top: 150px;
+}
+
+.flex-parameters {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 50px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.temperature-over-time {
+  font-size: 1.7rem;
+}
+
+.temperature-now-container {
+  max-width: 500px;
+}
+
+.temperature {
+  font-size: 8rem;
+  line-height: 300px;
+}
+
+.temperature-icon {
+  margin-top: -40px;
+}
+
+.other-information {
+  height: 300px;
+}
+
+.wind-speed-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  max-width: 300px;
+  height: 80px;
+  margin: 0 auto;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+}
+
+.wind-speed-container h3 {
+  font-size: 1.3rem;
+}
+
+.other-icon {
+  margin-right: 20px;
+  font-size: 1.5rem;
+}
+
+.other {
+  margin-left: 10px;
+  font-size: 1.3rem;
+}
+
+.rain-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  max-width: 300px;
+  height: 80px;
+  margin: 0 auto;
+  border-bottom: 2px solid black;
+}
+
+.rain-container h3 {
+  font-size: 1.3rem;
+}
+
+/* ------------------------------------------
+  -----------------Footer---------------------
+  ------------------------------------------- */
+
+footer {
+  background-color: rgb(255, 255, 255);
+  height: 112px;
+}
