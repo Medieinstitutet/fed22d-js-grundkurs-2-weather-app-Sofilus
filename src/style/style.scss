@@ -1,6 +1,17 @@
-@use "utils/a11y"; // Om det inte funkar, byt @use mot @import
-@use "vendor/reset";
+@use 'utils/a11y'; // Om det inte funkar, byt @use mot @import
+@use 'vendor/reset';
 
+@import 'base';
+
+@media screen and (min-width: 768px) {
+  @import 'tablet';
+}
+
+@media screen and (min-width: 1400px) {
+  @import 'desktop';
+}
+
+/*
 :root {
   // TODO: Går bra att radera kod även här!
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -17,7 +28,7 @@
   text-size-adjust: 100%;
 }
 
-// TODO: Radera mig! Jag är bara ett exempel.
+/* TODO: Radera mig! Jag är bara ett exempel.
 main {
   padding: 20px;
 }
@@ -61,4 +72,4 @@ main {
       }
     }
   }
-}
+}*/

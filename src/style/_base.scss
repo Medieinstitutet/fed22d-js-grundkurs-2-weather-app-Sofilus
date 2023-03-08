@@ -1,0 +1,304 @@
+* {
+  box-sizing: border-box;
+}
+
+/* ------------------------------------------
+-----------------Header---------------------
+------------------------------------------- */
+
+header {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  height: 200px;
+  font-family: 'Laila', sans-serif;
+}
+
+h1 {
+  margin-bottom: 60px;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 4rem;
+}
+
+header p {
+  height: 30px;
+}
+
+/* ------------------------------------------
+-----background images diffrent seasons------
+------------------------------------------- */
+.fall-img {
+  background-image: url('/public/Fall.jpg');
+}
+
+.summer-img {
+  background-image: url('/public/summer.jpg');
+}
+
+.spring-img {
+  background-image: url('/public/Spring.jpg');
+}
+
+.winter-img {
+  background-image: url('/public/Winter.jpg');
+}
+
+.background-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  padding: 10px;
+  min-height: 1000px;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* ------------------------------------------
+-----------------Searching field-------------
+------------------------------------------- */
+
+label {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  position: absolute;
+  top: 210px;
+  right: 20vw;
+  z-index: 2;
+}
+
+label input {
+  border: black solid 2px;
+  width: 200px;
+  height: 40px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  z-index: 2;
+}
+
+.magnifying-glass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 210px;
+  right: 20vw;
+  height: 40px;
+  width: 40px;
+  border: none;
+  background-color: black;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  z-index: 2;
+}
+
+.fa-magnifying-glass {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.search-dropdown {
+  height: 60px;
+  width: 240px;
+  position: absolute;
+  top: 250px;
+  right: 20vw;
+  background-color: rgb(212, 212, 212);
+  z-index: 2;
+}
+
+.search-dropdown ul {
+  list-style: none;
+  font-size: 1.1rem;
+}
+
+.search-dropdown:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+.display-none {
+  display: none;
+}
+
+.stations-container ul {
+  background-color: rgb(198, 199, 199);
+  min-height: 55px;
+  width: 240px;
+  position: absolute;
+  top: 233px;
+  right: 20vw;
+  padding: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: black solid 1px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  z-index: 2;
+}
+
+.stations-container ul li {
+  padding: 15px;
+  list-style: none;
+  text-align: center;
+  border-top: black solid 1px;
+}
+
+.stations-container ul li:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+/* ------------------------------------------
+-----------------Main---------------------
+------------------------------------------- */
+
+.temperature-container {
+  padding: 40px;
+}
+
+.weather-container {
+  min-height: 800px;
+}
+
+.picked-location {
+  padding: 20px;
+  width: 80vw;
+  max-width: 550px;
+  margin: 0 auto;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 60px;
+  background-color: rgb(250, 250, 250);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.temperature-now-container {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  max-width: 400px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  background-color: white;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.winter-decoration-img {
+  background-image: url('/public/snowflakes-white.png');
+  background-size: cover;
+}
+
+.spring-decoration-img {
+  background: rgb(236, 225, 216);
+  background: linear-gradient(
+    90deg,
+    rgba(236, 225, 216, 0.804359243697479) 7%,
+    rgba(240, 231, 201, 0.8155637254901961) 34%,
+    rgba(226, 220, 210, 0.773546918767507) 70%,
+    rgba(233, 229, 208, 0.7875525210084033) 100%
+  );
+}
+
+.fall-decoration-img {
+  background-image: url('/public/fall-leaf.jpg');
+  background-size: cover;
+}
+
+.summer-decoration-img {
+  background-image: url('/public/summer-flower.jpg');
+  background-size: cover;
+}
+
+.temperature-over-time {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.degrees {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  height: 200px;
+}
+
+.temperature {
+  font-size: 8rem;
+  line-height: 300px;
+}
+
+.temperature-icon {
+  font-size: 6rem;
+}
+
+.other-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
+  min-height: 200px;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: white;
+  background-size: cover;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.wind-speed-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  max-width: 300px;
+  height: 80px;
+  margin: 0 auto;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+}
+
+.wind-speed-container h3 {
+  font-size: 1.3rem;
+}
+
+.other-icon {
+  margin-right: 20px;
+  font-size: 1.5rem;
+}
+
+.other {
+  margin-left: 10px;
+  font-size: 1.3rem;
+}
+
+.rain-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  max-width: 300px;
+  height: 80px;
+  margin: 0 auto;
+  border-bottom: 2px solid black;
+}
+
+.rain-container h3 {
+  font-size: 1.3rem;
+}
+
+/* ------------------------------------------
+-----------------Footer---------------------
+------------------------------------------- */
+
+footer {
+  background-color: rgb(255, 255, 255);
+  height: 112px;
+}
